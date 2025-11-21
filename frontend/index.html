@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app-container">
+
+    <h1 class="title">Todo App</h1>
+
+    <!-- ADD FORM -->
+    <div class="add-task-box">
+        <input id="title" class="input" placeholder="Task title">
+        <input id="description" class="input" placeholder="Task description">
+        <button class="btn add-btn" onclick="addTask()">Add Task</button>
+    </div>
+
+    <!-- TASK LIST -->
+    <div id="tasks" class="task-list"></div>
+
+</div>
+
+<!-- INLINE EDITOR -->
+<div id="editor" class="editor hidden">
+    <h3>Edit Task</h3>
+
+    <input id="editTitle" class="input" placeholder="New title">
+    <input id="editDescription" class="input" placeholder="New description">
+
+    <label class="check-label">
+        <input type="checkbox" id="editCompleted"> Completed
+    </label>
+
+    <div class="editor-btns">
+        <button class="btn save-btn" onclick="saveEditedTask()">Save</button>
+        <button class="btn cancel-btn" onclick="closeEditor()">Cancel</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.tmp
+*.log
+*.sqlite3
+*.db
+
+# ---- Virtual environment ----
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+
+# ---- IDE ----
+.vscode/
+.idea/
+*.swp
+
+# ---- OS files ----
+.DS_Store
+Thumbs.db
+
+# ---- Python packaging ----
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ---- Alembic ----
+alembic/versions/*.pyc
+alembic/versions/__pycache__/
+
+# ---- Env files (SECRETS) ----
+.env
+.env.*
+*.env
+
+# ---- Cache ----
+.cache/
+pytest_cache/
+pip-cache/
+mypy_cache/
+
+# ---- Static/Uploads (если будут) ----
+static/*
+!static/.gitkeep
+
+uploads/*
+!uploads/.gitkeep
+
+# ---- Bytecode ----
+*.pyc
+__pycache__/
+
+# ---- Docker (если будешь использовать) ----
+docker-compose.override.yml
+.docker/
+docker-data/
+
+# ---- Coverage ----
+.coverage
+coverage.xml
+htmlcov/
+
+# ---- Logs ----
+*.log
+*.out
+
+# ---- Compiled files ----
+*.so
+*.dll
