@@ -29,22 +29,27 @@ app.add_middleware(
 )
 
 
+# Добавляем router_task, чтобы маршруты /tasks/... стали доступны в приложении
 app.include_router(router_task)
+
+"""
+Эндпоинт для проверки, работает ли база данных PostgreSQL.
+
+Как это работает:
+- открываем подключение через engine
+- выполняем простой SQL-запрос SELECT 1
+- если всё ок — значит подключение успешно
+- если ошибка — выводим её
+"""
 
 @app.get("/check_db")
 async def check_db():
     try:
         async with engine.connect() as conn:
             await conn.execute(text("SELECT 1"))
-        return {
-            "status":"conected"
-        }
+        return {"status": "connected"}
     except Exception as e:
-        return {
-            "error":str(e)
-        }
-
-
+        return {"error": str(e)}
 
 
 
